@@ -9,7 +9,9 @@ app = Flask(__name__)
 CORS(app)
 
 
-
+@app.route("/")
+def testing():
+    return jsonify({"message":"Working fine"})
 
 @app.route("/add_route", methods = ['POST'])
 def add_route():
