@@ -1,12 +1,10 @@
 from flask import Flask,jsonify
 from flask import request
 import user_management
-from flask_cors import CORS
 
 
 
 app = Flask(__name__)
-CORS(app)
 
 
 @app.route("/")
@@ -63,4 +61,4 @@ def verify_franchise(session_id):
 
 
 if __name__=='__main__':
-    app.run(host="0.0.0.0", debug=True)
+    app.run(debug=True)
